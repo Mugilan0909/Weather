@@ -7,6 +7,7 @@ def create_app():
     app=Flask(__name__,instance_relative_config=False)
     app.config['SQLALCHEMY_DATABASE_URI']='postgresql://hmtcfsrutytyyl:b4bcc6057aa825f8a3af87f898935f99c2315f0e882f66cfafa78bf45de8f3a3@ec2-54-157-79-121.compute-1.amazonaws.com:5432/d8c32okij0b31u'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
+    app.config['FLASK_APP']='__init__'
 
     db.init_app(app)
 
